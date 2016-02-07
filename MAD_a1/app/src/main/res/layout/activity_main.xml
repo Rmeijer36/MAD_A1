@@ -11,11 +11,14 @@
         android:layout_height="wrap_content"
         android:text="@string/currentAssignments"
         android:id="@+id/currentAssignments"
+        android:textSize="28sp"
+        android:textStyle="bold"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#4456e0" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -23,11 +26,174 @@
         android:layout_height="wrap_content"
         android:text="@string/addAssignment"
         android:id="@+id/addAssignment"
-        android:layout_below="@+id/currentAssignments"
+        android:background="#588ef2"
+        android:textStyle="bold"
+        android:onClick="newAssignClick"
+        android:layout_alignTop="@+id/currentAssignments"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:background="#ff4930"
-        android:textStyle="bold"
-        android:onClick="newAssignClick" />
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="1dp"
+        android:nestedScrollingEnabled="false" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollViewDetails"
+        android:layout_below="@+id/addAssignment"
+        android:layout_alignRight="@+id/addAssignment"
+        android:layout_alignEnd="@+id/addAssignment"
+        android:layout_above="@+id/textViewSummaryLabel"
+        android:background="#9f9999"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        style="@style/AppTheme">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="5dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TitleLabel"
+                    android:id="@+id/textViewTitleLabel"
+                    style="@style/TextLabels"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TitleField"
+                    android:id="@+id/textView2"
+                    android:layout_column="1"
+                    style="@style/TextFields" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DateLabel"
+                    android:id="@+id/textViewDateLabel"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    style="@style/TextLabels" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DateField"
+                    android:id="@+id/textViewDateField"
+                    style="@style/TextFields" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/PriorityLabel"
+                    android:id="@+id/textView3"
+                    style="@style/TextLabels" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/PriorityField"
+                    android:id="@+id/textViewPriorityField"
+                    style="@style/TextFields" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DetailsLabel"
+                    android:id="@+id/textViewDetailsLabel"
+                    style="@style/TextLabels" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DetailsField"
+                    android:id="@+id/textView4"
+                    style="@style/TextFields" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TasksLabel"
+                    android:id="@+id/textViewTasksLabel"
+                    style="@style/TextLabels" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TasksField"
+                    android:id="@+id/textView5"
+                    style="@style/TextFields" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="58dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DeleteButton"
+                    android:id="@+id/buttonDelete"
+                    android:layout_column="0"
+                    android:clickable="true"
+                    android:textStyle="bold"
+                    android:background="#f43939" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_weight="0.95"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/scrollViewDetails"
+        android:layout_alignEnd="@+id/scrollViewDetails"
+        android:layout_marginBottom="25dp"
+        android:background="#9f9999"
+        style="@style/AppTheme" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SummaryLabel"
+        android:id="@+id/textViewSummaryLabel"
+        style="@style/TextLabels"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/spinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp" />
 
 </RelativeLayout>

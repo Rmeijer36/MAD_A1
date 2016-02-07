@@ -6,33 +6,149 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.tumblr.httpappsbybridget.mad_a1.AddNewAssignment">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/NewAssignmentLabel"
+        android:id="@+id/textViewNewAssignmentLabel"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/newHomework"
-        android:labelFor="@color/abc_primary_text_material_light"
-        android:focusableInTouchMode="false">
+        android:layout_marginTop="10dp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Large Text"
-            android:id="@+id/assignmentName" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textViewNewAssignmentLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Large Text"
-            android:id="@+id/assignmentDetails" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <DatePicker
-            android:layout_width="245dp"
-            android:layout_height="202dp"
-            android:id="@+id/dueDate" />
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/TitleLabel"
+                android:id="@+id/textViewTitleLabel"
+                style="@style/TextLabels"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextTitle"
+                style="@style/TextFields"
+                android:editable="true"
+                android:text="@string/TitleEditText" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/DateLabel"
+                android:id="@+id/textViewDateLabel"
+                android:layout_column="0"
+                style="@style/TextLabels" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="datetime"
+                android:ems="10"
+                android:id="@+id/editTextDate"
+                android:layout_column="1"
+                android:editable="true"
+                android:text="@string/DateEditText" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PriorityLabel"
+                android:id="@+id/textViewPriorityLabel"
+                android:layout_column="0"
+                style="@style/TextLabels" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerPriority"
+                android:layout_column="1"
+                android:spinnerMode="dropdown"
+                style="@style/TextFields"
+                android:clickable="true"
+                android:entries="@array/PriorityLevels" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/DetailsLabel"
+                android:id="@+id/textViewDetailsLabel"
+                android:layout_column="0"
+                style="@style/TextLabels" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/editText"
+                android:layout_column="0"
+                android:text="@string/DetailsEditText" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/TasksLabel"
+                android:id="@+id/textViewTasksLabel"
+                android:layout_column="0"
+                style="@style/TextLabels" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/editTextTasks"
+                android:layout_column="0"
+                android:text="@string/TasksEditText" />
+        </TableRow>
+
+    </TableLayout>
 </RelativeLayout>

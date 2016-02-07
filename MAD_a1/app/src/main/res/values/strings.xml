@@ -1,9 +1,31 @@
 <resources>
-    <string name="app_name">MAD_a1</string>
-
+    <string name="app_name">Assignment Planner</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_add_new_assignment">AddNewAssignment</string>
-    <string name="addAssignment">Add Assignment</string>
+    <string name="addAssignment">New</string>
     <string name="currentAssignments">Current Assignments</string>
+    <string name="TitleLabel">Title:</string>
+    <string name="TitleField">Create New</string>
+    <string name="DateLabel">Due Date:</string>
+    <string name="DateField">12/31/2016</string>
+    <string name="PriorityLabel">Priority:</string>
+    <string name="PriorityField">High</string>
+    <string name="SummaryLabel">Assignment List</string>
+    <string name="DetailsLabel">Details:</string>
+    <string name="DetailsField">Create New</string>
+    <string name="TasksLabel">Tasks:</string>
+    <string name="TasksField">Create New</string>
+    <string name="DeleteButton">Delete</string>
+    <string name="NewAssignmentLabel">Create New Assignment</string>
+    <string name="TitleEditText" />
+    <string name="DateEditText" />
+    <string name="DetailsEditText" />
+    <string name="TasksEditText" />
+    <string name="SettingsTitleLabel">Settings</string>
+    <string-array name="PriorityLevels">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
 </resources>
