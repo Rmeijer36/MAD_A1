@@ -1,0 +1,202 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/bridget">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/currentAssignments"
+        android:id="@+id/currentAssignments"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#4456e0" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addAssignment"
+        android:id="@+id/addAssignment"
+        android:background="#588ef2"
+        android:textStyle="bold"
+        android:onClick="newAssignClick"
+        android:layout_alignTop="@+id/currentAssignments"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="1dp"
+        android:nestedScrollingEnabled="false"
+        android:textSize="14sp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollViewDetails"
+        style="@style/AppTheme"
+        android:layout_below="@+id/spinnerAssignmentList"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="5dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TitleLabel"
+                    android:id="@+id/textViewTitleLabel"
+                    style="@style/TextLabels"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TitleField"
+                    android:id="@+id/textViewTitleField"
+                    android:layout_column="1"
+                    style="@style/TextFields" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DateLabel"
+                    android:id="@+id/textViewDateLabel"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    style="@style/TextLabels" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DateField"
+                    android:id="@+id/textViewDateField"
+                    style="@style/TextFields" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/PriorityLabel"
+                    android:id="@+id/textView3"
+                    style="@style/TextLabels" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/PriorityField"
+                    android:id="@+id/textViewPriorityField"
+                    style="@style/TextFields" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DetailsLabel"
+                    android:id="@+id/textViewDetailsLabel"
+                    style="@style/TextLabels" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DetailsField"
+                    android:id="@+id/textView4"
+                    style="@style/TextFields" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TasksLabel"
+                    android:id="@+id/textViewTasksLabel"
+                    style="@style/TextLabels" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TasksField"
+                    android:id="@+id/textViewTasksField"
+                    style="@style/TextFields" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerAssignmentList"
+        style="@style/AppTheme"
+        android:spinnerMode="dialog"
+        android:entries="@array/AssignmentList"
+        android:layout_below="@+id/textViewSummaryLabel"
+        android:layout_alignRight="@+id/addAssignment"
+        android:layout_alignEnd="@+id/addAssignment"
+        android:gravity="left" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SummaryLabel"
+        android:id="@+id/textViewSummaryLabel"
+        style="@style/TextLabels"
+        android:layout_below="@+id/addAssignment"
+        android:layout_alignLeft="@+id/currentAssignments"
+        android:layout_alignStart="@+id/currentAssignments" />
+
+    <Button
+        android:layout_width="58dp"
+        android:layout_height="wrap_content"
+        android:text="@string/DeleteButton"
+        android:id="@+id/buttonDelete"
+        android:layout_column="0"
+        android:clickable="true"
+        android:textStyle="bold"
+        android:background="#f43939"
+        android:layout_alignBottom="@+id/scrollViewDetails"
+        android:layout_alignLeft="@+id/addAssignment"
+        android:layout_alignStart="@+id/addAssignment"
+        android:textSize="14sp" />
+
+</RelativeLayout>
