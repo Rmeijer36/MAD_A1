@@ -28,4 +28,5 @@
         <item>Medium</item>
         <item>High</item>
     </string-array>
+    <string name="title_activity_settings_page">settings_page</string>
 </resources>

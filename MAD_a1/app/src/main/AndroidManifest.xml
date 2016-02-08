@@ -20,6 +20,10 @@
             android:name=".AddNewAssignment"
             android:label="@string/title_activity_add_new_assignment" >
         </activity>
+        <activity
+            android:name=".settings_page"
+            android:label="@string/title_activity_settings_page" >
+        </activity>
     </application>
 
 </manifest>

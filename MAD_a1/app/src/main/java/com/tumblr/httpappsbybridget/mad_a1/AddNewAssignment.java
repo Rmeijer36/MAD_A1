@@ -1,7 +1,8 @@
 package com.tumblr.httpappsbybridget.mad_a1;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -29,7 +30,11 @@ public class AddNewAssignment extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+
+            Intent intent = new Intent(AddNewAssignment.this, settings_page.class);
+            startActivity(intent);
+
+            //return true;
         }
 
         return super.onOptionsItemSelected(item);
